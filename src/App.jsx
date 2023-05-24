@@ -6,6 +6,7 @@ import Card from "./Card";
 import { v4 as uuidv4 } from "uuid";
 import _, { set } from "lodash";
 import TopBar from "./topBar";
+import FlipMove from 'react-flip-move';
 
 function App() {
   const [cards, setCards] = useState([
@@ -13,64 +14,64 @@ function App() {
       id: uuidv4(),
       clicked: false,
       name: "Aboot is Dead",
-      source: "/AbbotIsDead1.jpg",
+      source: "/AbbotIsDead1.webp",
     },
-    { id: uuidv4(), clicked: false, name: "Ian", source: "/Ian1.jpg" },
+    { id: uuidv4(), clicked: false, name: "Ian", source: "/Ian1.webp" },
     {
       id: uuidv4(),
       clicked: false,
       name: "Ian Louise eat apple",
-      source: "/IanLouiseEatApple1.jpg",
+      source: "/IanLouiseEatApple1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Ian Louise must go",
-      source: "/IanLouiseMustGo1.jpg",
+      source: "/IanLouiseMustGo1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "It wansn't us",
-      source: "/ItWasntUs1.jpg",
+      source: "/ItWasntUs1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Louise",
-      source: "/Louise1.jpg",
+      source: "/Louise1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Louise has question",
-      source: "/LouiseHasQuestion1.jpg",
+      source: "/LouiseHasQuestion1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Louise has weapon",
-      source: "/LouiseHasWeapon1.jpg",
+      source: "/LouiseHasWeapon1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Offer Weapon",
-      source: "/OfferWeapon_1.jpg",
+      source: "/OfferWeapon_1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Ship grounded",
-      source: "/ShipGrounded_1.jpg",
+      source: "/ShipGrounded_1.webp",
     },
     {
       id: uuidv4(),
       clicked: false,
       name: "Solve",
-      source: "/Solve1.jpg",
+      source: "/Solve1.webp",
     },
-    { id: uuidv4(), clicked: false, name: "Time", source: "/Time1.jpg" },
+    { id: uuidv4(), clicked: false, name: "Time", source: "/Time1.webp" },
   ]);
 
   const [nameArray, setnameArray] = useState([]);
@@ -122,6 +123,7 @@ function App() {
       />
 
       <div className="card-container">
+     
         {cards.map((card) => {
           return (
             <Card
@@ -133,6 +135,7 @@ function App() {
             />
           );
         })}
+       
       </div>
     </>
   );
